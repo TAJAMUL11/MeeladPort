@@ -114,7 +114,7 @@ section{
 
 }
 #home{
-    background: url(HomeSbg.png);
+    background: url(./ImagesBG/HomeSbg.png);
     background-position: center;
     background-size: cover;
 
@@ -226,7 +226,7 @@ span{
 /* About section */
 
 #about{
-    background: url(aboutBG.png);
+    background: url(./ImagesBG/aboutBG.png);
     background-position: center;
     background-size: contain;
     
