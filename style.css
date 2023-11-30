@@ -14,11 +14,11 @@
 }
 
 :root{
-    --bg-color : whitesmoke;
-    --second-bg-color : lightgrey;
+    --bg-color : #f5f5f5;
+    --second-bg-color : #ffffff94;
     --text-color : #000000;
     --main-color : #FD5956;
-    --color-behind: #FD5956;
+   
 }
 
 html{
@@ -113,24 +113,6 @@ section{
     align-items: center;
 
 }
-@keyframes fadeIn {
-    0%{
-        transform: scale(1);
-       
-    }
-     50% { 
-        transform: scale(0.97);
-        box-shadow: 0 0 1rem var(--text-color);
-        
-        
-     }
-    
-    100% { 
-        transform: scale(1);
-        
-     }
-  }
-
 
 .home-img img{
     width: 21vw;
@@ -138,10 +120,27 @@ section{
     border-top-left-radius: 28% 20%;
    border-bottom-left-radius: 70% 50%;
    border-bottom-right-radius: 40% 70%;
-    background-color: var(--color-behind);
-    animation: fadeIn 2.2s infinite;
- 
+    background-color: var(--main-color);
+    animation: floatIn 2.2s  ease-in-out infinite;
 }
+
+@keyframes floatIn {
+    0%{
+        transform: translateY(0);
+       
+    }
+     50% { 
+        transform: translateY(-2.4rem);
+        
+        
+     }
+    
+    100% { 
+        transform: translateY(0);
+        
+     }
+  }
+
 
 .home-content .design{
     font-size: 5.7rem;
@@ -172,7 +171,7 @@ span{
     font-size: 3rem;
     font-weight: 700;
     line-height: 1.3;
-    color: var(--color-behind);
+    color: var(--main-color);
 }
 
 .home-content p{
@@ -324,7 +323,7 @@ span{
 
 .Projects h2{
     margin-bottom: 3rem;
-    color: var(--color-behind);
+    color: var(--main-color);
 }
 
 .Projects-container{
@@ -405,7 +404,6 @@ span{
     justify-content: center;
     align-items: center;
     text-align: center;
-    min-height: 80vh;
 }
 
 .contact-content h2{
@@ -414,7 +412,7 @@ span{
 }
 
 .contact-content p{
-    font-size: 1.8rem;
+    font-size: 1.78rem;
     margin: .3rem 0 1rem;
     line-height: 2.3;
    
@@ -483,7 +481,7 @@ span{
 
     /* Media Queries */
 
-/** This is  for the overall sections*/
+
 @media (max-width: 1200px){
     html{
         font-size: 55%;
@@ -496,6 +494,14 @@ span{
     section{
         padding: 10rem 3% 2rem;
     }
+
+    .home-content .design{
+        font-size: 5.5rem;
+    }
+    .home-img img{
+        width: 30vw;
+    }
+
     .services{
         padding-bottom: 7rem;
     }
@@ -510,12 +516,12 @@ span{
     }
 }
 
-/* this is for menu icon*/
+
 @media (max-width: 768px){  
     #menu-icon{
         display: block;
     }
-/* For making the nabar more responsive and block like, just like in modern browsers*/
+
     .navbar{
         position: absolute;
         top: 100%;
@@ -528,7 +534,7 @@ span{
         display: none;  /* on and off menu*/
     }
 
-    .navbar.active{  /* on and off menu*/
+    .navbar.active{ 
         display: block;
     }
 
@@ -544,16 +550,16 @@ span{
         padding: 0;
         color: var(--text-color);
     }
-    /* to adjust the content of home section and  make it wrap in columns*/
+   
     .home{
         flex-direction: column;
     }
     .home-content h3{
-        font-size: 2.6rem;
+        font-size: 2.5rem;
         
     }
     .home-content h1{
-        font-size: 5rem;
+        font-size: 4.9rem;
     }
 
    
@@ -593,6 +599,9 @@ span{
 @media (max-width: 450px){
     html{
         font-size: 50%;
+    }
+    .home-content .design{
+        font-size: 4.3rem;
     }
     .contact-content p {
         font-size: 1.6rem;
