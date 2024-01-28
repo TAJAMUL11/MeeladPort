@@ -252,13 +252,6 @@ span{
 
 /* About section */
 
-/* #about{
-    background: url();
-    background-position: center;
-    background-size: contain;
-    
-    
-} */
 .about{
     display: flex;
     justify-content: center;
@@ -272,6 +265,12 @@ span{
     min-height: 40vh;
     max-width: 100vw;
     
+}
+.about-img{
+    background-image: url(./ImagesBG/aboutBG.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .about-img img{
@@ -292,9 +291,14 @@ span{
 }
 
 .about-content p{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
     font-size: 1.5rem;
     /* min-width: 40vw; */
     margin-bottom: 9rem;
+    text-align: center;
     width: 54.688rem;
     height: 3.75rem; 
 
@@ -314,12 +318,12 @@ span{
     margin-bottom: 3rem;
    
 }
-.services .pcheck{
-    width: 54.688rem;
+/* .services .pcheck{
+    width: 30%;
     height: 3.75rem; 
     margin: auto;
     margin-bottom: 7rem;
-}
+} */
 .services-container{
     display: flex;
     justify-content: center;
@@ -332,11 +336,16 @@ span{
     flex: 1 1 30rem;
     padding: 4.5rem 4.5rem 4rem;
     text-align: center;
-    transition: 0.5s ease;
+    transition: 1s ease;
+    box-shadow: 0 .01rem .03rem .03rem var(--text-color);
+   
+   
 }
 .services-container .services-box:hover{
-    transform: scale(0.99);
-    box-shadow: 0 0 .1rem var(--text-color);
+    transform: scale(0.96);
+    box-shadow: none;
+   
+    
 
 }
 
@@ -420,6 +429,14 @@ span{
     font-size: 1.7rem;
     color: var(--bg-color);
 
+}
+.Project-layer h3{
+    font-size: 3rem;
+  
+}
+.Project-layer p{
+    font-size: 1.4rem;
+   
 }
 
 /* contact section */
